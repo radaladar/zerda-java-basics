@@ -105,16 +105,37 @@ class TestApple {
 
 Are the tests passing? Detail your answer! [2p] Fix the situation! [2p]
 
+
 #### Explain what you did, and answer the questions here:
 
+These tests cannot be run, because, the Apple class is not initialized in TestApple.
+To fix this, we can make Apple's methods static, this way the tests can be run without an instance of Apple.
+The "@Test" tags should also be put before the test methods, in order for JUnit to run them correctly.
+With these fixes, the tests will run and pass even though the methods of Apple are nonsense but they will return 5 in both cases.
 
 ## 4. Question time! (~20 mins) [6p]
 
-### Where the abstract class is useful? [2p]
+### Where is the abstract class useful? [2p]
 #### Your answer:
+Abstract classes are similar to interfaces in that they cannot be instanciated, however they can contain fields and methods (with or without implementation).
+Unlike interfaces, abstract classes can have fields that are not static and final and methods that are not public.
+This is useful when there are several classes that share fields and/or have methods that modify fields in an instance of these classes.
 
 ### Describe a method! Show the necessary parts and how are them called! [2p]
 #### Your answer:
+A method is a collection of statements to perform a specific function. It's syntax looks like this:
+
+modifier returnType nameOfMethod (Parameter List) {
+   // method body
+}
+
+modifiers define access type (such as public, private, protected or static)
+returnType defines the type of value the method returns (can be void)
+nameOfMethod is the name of the method
+parameter list defines the types and order of parameters in the method (may contain no parameters)
+the method body defines what the method does
 
 ### What is the constructor? When it is used? [2p]
 #### Your answer:
+A constructor looks like a method where there is no return type and has the name of the class it is found in.
+It is used to create an Object, which is an instance of the class the constructor belongs to.
