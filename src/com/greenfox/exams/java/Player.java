@@ -5,7 +5,11 @@ import java.util.ArrayList;
 
 public class Player {
     private String name;
-    private ArrayList<Card> played;
+    private ArrayList<Card> played = new ArrayList<>();
+
+    public Player(String name) {
+        this.name = name;
+    }
 
     public void add(Deck deck){
         Card drawCard = deck.draw();
@@ -15,7 +19,7 @@ public class Player {
     public int sum(){
         int sum = 0;
         for (Card card : played) {
-            switch card.getValue() {
+            switch (card.getValue()) {
                 case "A":
                     if (sum+10 > 21) {
                         sum += 1;
@@ -35,6 +39,7 @@ public class Player {
             }
 
         }
+        return sum;
     }
 
     public String playerDisplay(){

@@ -7,8 +7,8 @@ import java.util.Collections;
 public class Deck{
     private static String[] colors = {"treff", "pikk", "kor", "karo"};
     private static String[] values = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"};
-    private ArrayList<Card> cards;
-    private ArrayList<Card> used;
+    private ArrayList<Card> cards = new ArrayList<>();
+    private ArrayList<Card> used = new ArrayList<>();
 
     public Deck() {
         for(String color : colors) {
@@ -21,7 +21,7 @@ public class Deck{
 
     public Card draw() {
         Card drawCard = cards.get(0);
-        used.add(drawCard;
+        used.add(drawCard);
         cards.remove(0);
         return drawCard;
     }
