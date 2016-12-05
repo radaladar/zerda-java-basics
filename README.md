@@ -129,11 +129,11 @@ modifier returnType nameOfMethod (Parameter List) {
    // method body
 }
 
-modifiers define access type (such as public, private, protected or static)
-returnType defines the type of value the method returns (can be void)
-nameOfMethod is the name of the method
-parameter list defines the types and order of parameters in the method (may contain no parameters)
-the method body defines what the method does
+Modifiers define access type (such as public, private, protected or static).
+ReturnType defines the type of value the method returns (can be void).
+NameOfMethod is the name of the method.
+Parameter list defines the types and order of parameters in the method (may contain no parameters).
+The method body defines what the method does.
 
 ### What is the constructor? When it is used? [2p]
 #### Your answer:
