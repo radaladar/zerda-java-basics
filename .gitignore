@@ -1,5 +1,4 @@
 # IntelliJ Files
-*/.idea/
-*/out/
+/.idea/
+/out/
 *.iml
-*/*.iml
