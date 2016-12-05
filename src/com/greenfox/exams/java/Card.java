@@ -14,7 +14,8 @@ public class Card {
         return value;
     }
 
-    public String getColor() {
-        return color;
+    public String toString() {
+        String cardString = this.color + " " + this.value + " ";
+        return cardString;
     }
 }

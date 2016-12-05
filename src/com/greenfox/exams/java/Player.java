@@ -43,6 +43,15 @@ public class Player {
     }
 
     public String playerDisplay(){
-        return "a";
+        String cardsString = "";
+        for (Card card : played) {
+            cardsString += card.toString();
+            cardsString += "<br>";
+        }
+        return "<html>" + this.name + " played:<br>" + cardsString + "value of " + this.sum() + "</html>";
+    }
+
+    public void reset(){
+        this.played = new ArrayList<>();
     }
 }

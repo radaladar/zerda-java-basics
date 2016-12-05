@@ -20,9 +20,13 @@ public class Deck{
     }
 
     public Card draw() {
+        if (cards.size() == 0) {
+            return null;
+        } else {
         Card drawCard = cards.get(0);
         used.add(drawCard);
         cards.remove(0);
         return drawCard;
+        }
     }
 }

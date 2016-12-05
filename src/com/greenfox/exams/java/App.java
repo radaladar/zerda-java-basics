@@ -15,7 +15,7 @@ public class App {
         int xPos = ((dim.width/2)-(appFrame.getWidth()/2));
         int yPos = (dim.height/2)-(appFrame.getHeight()/2);
         appFrame.setLocation(xPos, yPos);
-        appFrame.setResizable(false);
+//        appFrame.setResizable(false);
         appFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         appFrame.pack();
         appFrame.setLocationRelativeTo(null);

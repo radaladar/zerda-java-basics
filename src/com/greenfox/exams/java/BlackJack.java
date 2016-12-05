@@ -23,7 +23,11 @@ public class BlackJack extends JPanel {
                 new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
-
+                        user.reset();
+                        house.reset();
+                        playDeck = new Deck();
+                        userCards.setText(user.playerDisplay());
+                        houseCards.setText(house.playerDisplay());
                     }
                 }
         );
@@ -31,17 +35,24 @@ public class BlackJack extends JPanel {
                 new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
-                        user.add(playDeck);
-                        user.sum();
-                        house.add(playDeck);
-                        house.sum();
+                        try {
+                            user.add(playDeck);
+                            user.sum();
+                            if (house.sum() < 17) {
+                                house.add(playDeck);
+                                house.sum();
+                            }
+                        } catch (Exception ex) {
+                            ex.printStackTrace();
+                        }
+                        userCards.setText(user.playerDisplay());
+                        houseCards.setText(house.playerDisplay());
                     }
                 }
         );
-        this.add(buttonNewGame);
-        this.add(buttonDraw);
         this.add(userCards);
         this.add(houseCards);
-
+        this.add(buttonNewGame);
+        this.add(buttonDraw);
     }
 }
